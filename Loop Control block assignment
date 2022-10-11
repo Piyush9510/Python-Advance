@@ -1,0 +1,346 @@
+# write a python program to print all natural numbers from 1 to n using loop
+n = int(input("Enter the number: "))
+for i in range(1,n+1):
+    print(i,end=" ")
+    
+# ==================================================
+
+# Write the python program to print all natural numbers in reverse
+import string
+
+n = int(input("Enter the number: "))
+for i  in range(n,0,-1):
+    print(i,end=" ")
+    
+# =======================================
+
+# Write a python program to print all alphabate from a to z
+s = string.ascii_lowercase
+for i in s:
+    print(i, end=' ')
+    
+# =============================================
+
+# Write a python program to print even number from 1 to 100
+for i in range(1, 100):
+    if i % 2 == 0:
+        print(i ,end=' ')
+        
+# ===========================================================
+
+# Write a python program to find sum of all natural numbers from 1 to n
+n = int(input('Enter the number'))
+total = 0
+for i in range(1,n+1):
+    total = total +i
+print('sum of natural number from 1 to ',n ,'=',total )
+
+# ===================================================================
+
+# write a python program to print alphabate from a to z
+l = string.ascii_lowercase
+for i in l:
+    print(i,end=' ')
+# ============================================================
+
+# Write a Python program to print all even numbers between I to 100
+for i  in range(0,101):
+    if i % 2 == 0:
+        print(i)
+        
+# ===========================================================
+
+# Write a Python program to print all odd number between 1 to 100.
+for i in range(1,101):
+    if i % 2 !=0:
+        print(i)
+        
+# ======================================================================
+
+# Write a Python program to find sum of all even numbers between 1 to n.
+n =int(input('Enter a number upto which you want, '
+             'to find sum of even natural numbers:\n'))
+sum = 0
+for i in range(1,n+1):
+    if i % 2 == 0:
+        sum = sum + i
+print('sum of even numbers are',sum)
+
+# =============================================================================
+
+# Write a Python program to find sum of all odd numbers between I to n.
+n =int(input('Enter a number upto which you want, '
+             'to find sum of odd natural numbers:\n'))
+sum =0
+for i in range(0,n+1):
+    if i % 2 != 0:
+        sum = sum + i
+print(sum)
+
+# ===================================================================================
+
+# Write a Python program to print multiplication table of any number. Take user input.
+n = int(input('Enter the number'))
+for i in range(1,11):
+    table = n*i
+    print(table)
+    
+# ========================================================================
+
+# Write a Python program to count number of digits in a number.
+n = int(input('Enter the number: '))
+n = str(n)
+l = n.__len__()
+print('Number of digits in the number =',l)
+
+# ====================================================
+
+# Write a Python program to find first and last digit of a number.
+n = int(input('Enter the number'))
+l = str(n)
+m = l.__len__()
+if m == 1:
+    print('It is the single digit number and hence first and last digit is',n)
+else:
+    print('First digit =', l[0], 'Last digit =', l[m - 1])
+    
+# ===================================================================
+
+# Write a Python program to find sum of first and last digit of a number.
+n = int(input('Enter the number'))
+l = str(n)
+m = l.__len__()
+if m == 1:
+    print('It is the single digit number hence sum is',n)
+else:
+    l1 = int(l[0])
+    l2 = int(l[m-1])
+    sum = l1+l2
+    print('Sum of first and last digit of number is =',sum)
+    
+# ======================================================================
+
+# Write a Python program to swap first and last digits of a number.
+n = int(input('Enter the number'))
+l = str(n)
+l1 =l.__len__()
+m3 = set()
+for i in range(1,l1+1):
+    if i == 1:
+        m1 = l[0]
+    elif i == l1:
+        m2 = l[l1-1]
+    for k in l[1],l[l1-2]):
+        m4= m3.add(k)
+
+m4 = str(m4)
+print(m2+m4+m1)
+
+# ============================================================
+
+# Write a Python program to calculate sum of digits of a number.
+n = input('Enter the number')
+sum =0
+for i in n:
+    sum = sum+int(i)
+print('Sum of digit is',sum)
+
+# ========================================================
+
+# Write a Python program to calculate product of digits of a number
+n = input('Enter the number')
+prd=1
+for i in n:
+    prd = prd*int(i)
+print(prd)
+
+# ===============================================================
+
+# Write a Python program to enter a number and print its reverse.
+n = input('Enter the number')
+rev = ''
+for i in range(len(n)-1, -1, -1):
+   rev = rev + n[i]
+print('Reverse number is =', rev)
+
+# =======================================================================
+
+# Write a Python program to check whether a number is palindrome or not.
+n = input("Enter the nuber")
+number = ' '
+for i in range(len(n), 0, -1):
+   number = number + n[i-1]
+   
+if int(number) == int(n):
+   print('Number is palindrome')
+else:
+   print('Number is not palindrome')
+   
+# =============================================================
+
+# Write a Python program to find frequency of each digit in a given integer.
+n = input("Enter the nuber")
+
+for i in set(n):
+   l = n.count(i)
+   print(i, '=', l ,'times')
+   
+# ====================================================================
+
+# Write a Python program to enter a digit and print it in words.
+n = input("Enter the nuber: ")
+d = {'1':'one','2':'two','3':'three','4':'four','5':'five','6':'six','7':'seven','8':'eight','9':'nine','0':'zero'}
+for i in (n):
+   print(d[i])
+   
+# ======================================================
+
+# Write a Python program to find power of a number using for loop.
+n = int(input('Enter the number: '))
+for i in str(n):
+   power = int(i)*int(i)
+   print(power)
+   
+# ====================================================================
+
+# Write a Python program to calculate factorial of a number.
+n = int(input('Enter the number: '))
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i
+print(fact)
+
+#  =========================================================
+
+# Write a Python program to find HCF (GCD) of two numbers
+n = int(input('Enter the first number: '))
+m = int(input('Enter the second number: '))
+
+for i in range(1,min(n,m)+1):
+    if n % i == 0 and m % i == 0:
+        c=i
+print('HCF is',c)
+
+# =======================================================
+
+# Write a Python program to find LCM of two numbers.
+n = int(input('Enter the first number: '))
+m = int(input('Enter the second number: '))
+k = 1
+l = 1
+k1 = []
+l1 = []
+for i in range(1,100):
+    k=n*i
+    k1.append(k)
+for i in range(1,100):
+    l = m * i
+    l1.append(l)
+k1 = set(k1)
+k2 = set(l1)
+c = k1.intersection(k2)
+str(c)
+print('LSM of',n,'and',m,'is ',sorted(c)[0])
+
+# =============================================================
+
+# Write a Python program to check whether a number is Prime number or  not.
+n = int(input('Enter the number: '))
+l = []
+for i in range(1,n+1):
+    m = n % i
+    if m == 0:
+      l.append(i)
+if len(l) >= 3:
+    print('Number is prime number')
+else:
+    print('Number is not prime number')
+    
+# ====================================================
+
+# Write a Python program to print all Prime numbers between I to n.
+n = int(input('Enter the number: '))
+l = []
+d = []
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        m = i % j
+        if m == 0:
+            l.append(j)
+    if len(l) <= 2:
+        l.clear()
+        d.append(i)
+    else:
+        l.clear()
+print(d)
+
+# ===================================================================
+
+# Write a Python program to find sum of all prime numbers between 1 to n
+n = int(input('Enter the number: '))
+l = []
+d = []
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        m = i % j
+        if m == 0:
+            l.append(j)
+    if len(l) <= 2:
+        l.clear()
+        d.append(i)
+    else:
+        l.clear()
+print(d)
+print(sum(d))
+
+# =========================================================
+
+# Write a Python program to check whether a number is Armstrong number or not.
+n = input('Enter the number: ')
+m = 0
+for i in range(0,len(n)):
+    m = m + int(n[i])**3
+if m == int(n):
+    print('Number is Armstrong')
+else:
+    print('Number is not Armstrong')
+    
+# =====================================================================
+
+# Write a Python program to print Fibonacci series up to n terms.
+n = int(input('Enter the number'))
+sum = 0
+s =  []
+for i in range(0,2):
+    a=i
+    s.append(a)
+for i in range(2,n+1):
+    sum = s[-1]+s[-2]
+    if sum < n:
+        s.append(sum)
+print(s)
+
+# ===========================================================
+# Write a Python program to print the given star patterns
+for i in range(1,6):
+    print('*  '* i)
+    
+# (OR)
+
+for i  in range(1,6):
+    for j in range(0,i):
+        print('*',end=' ')
+    print('\r')
+    
+# ==========================================
+
+# Write a Python program to print the given number patterns.
+    1
+    22
+    333
+    4444
+    55555
+for i in range(1,6):
+    for j in range(0,i):
+        print(i,end=' ')
+    print('\r')
