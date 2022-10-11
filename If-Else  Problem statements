@@ -1,0 +1,222 @@
+a = int(input('Enter the first number: '))
+b = int(input('Enter the second number: '))
+if a > b:
+    print('Greater number is', a)
+else:
+    print('Greater number is', b)
+
+# =========================================================
+
+a = int(input('Enter the first number: '))
+b = int(input('Enter the second number: '))
+c = int(input('Enter the third number: '))
+if a > b and a > c:
+    print('Greater number is', a)
+elif b > c:
+    print('Greater number is', b)
+else:
+    print('Greater number is', c)
+
+# ====================================================================
+
+a = int(input('Enter the number: '))
+if a > 0:
+    print('Number is positive')
+elif a < 0:
+    print('Number is negative')
+else:
+    print('Number is zero')
+    
+# =============================================================
+
+a = int(input('Enter the number: '))
+if (a % 5) == 0:
+    print('Number is divisible by 5')
+else:
+    print('Number is not divisible by 5')
+
+# ==========================================================
+
+a = int(input('Enter the number: '))
+if a % 2 == 0:
+    print('Number is even')
+else:
+    print('Number is odd')
+    
+# =======================================================
+
+a = int(input("Please enter number of days in year (or)"
+              "\nNumber of days in februvary month : "))
+if a == 366 or a == 29:
+    print('Its a leap year')
+elif a == 365 or a == 28:
+    print('Its not a leap year')
+else:
+    print('You entered wrong number of days...!')
+
+# ==========================================================
+
+a = input('Enter the character')
+a = a.upper()
+import string
+b = list(string.ascii_uppercase)
+if a in b:
+    print('Its a alphabet')
+else:
+    print('Its not a alphabet')
+
+#(OR)
+
+a = input('Enter the character: ')
+a1 = a.isalpha()
+if a1==1:
+    print(a, 'is alphabet')
+else:
+    print(a,  'is not alphabet ')
+    
+# =================================================
+
+a = input('Enter the alphabet: ')
+a1 = a.lower()
+b = ['a', 'e', 'i', 'o', 'u']
+if a1 in b:
+    print('Its a vowel')
+else:
+    print('Its a consonant')
+    
+# ==================================================
+
+a = input('Enter the character: ')
+a1 = a.isupper()
+if a1 == 1:
+    print('character is uppercase')
+else:
+    print('Character is lowercase')
+
+# =====================================================
+
+a = int(input('Enter the first angle: '))
+b = int(input('Enter the second angle: '))
+c = int(input('Enter the Third angle: '))
+if (a+b+c) <= 180:
+    print('Tringle is valid')
+else:
+    print('Tringle is invalid')
+    
+# =======================================================
+
+a = int(input('Enter the first side: '))
+b = int(input('Enter the second side: '))
+c = int(input('Enter the Third side: '))
+if a + b > c:
+    print('Tringle is possible')
+elif b + c > a:
+    print('Tringle is possible')
+elif a + c > b:
+    print('Tringle is possible')
+else:
+    print('Tringle is not possible')
+    
+# =======================================================
+
+a = int(input('Enter the first side: '))
+b = int(input('Enter the second side: '))
+c = int(input('Enter the Third side: '))
+if a == b == c:
+    print('Tringle is equilateral tringle')
+elif a == b or b == c or c == a:
+    print('Tringle is Isosceles Triangle')
+elif a != b and b != c and c != a:
+    print('Tringle is Scalene Triangle')
+
+# =======================================================
+
+s_cost = int(input('Enter selling cost: '))
+a_cost = int(input('Enter actual cost: '))
+if s_cost > a_cost:
+    profit = s_cost - a_cost
+    print('You made a profit of : ', profit)
+elif s_cost < a_cost:
+    loss = a_cost - s_cost
+    print('You are in a loss of : ', loss)
+    
+# ===========================================================
+
+phy = int(input('Please enter your marks obtained in Physics out of 100: '))
+chem = int(input('Please enter your marks obtained in Chemistry out of 100: '))
+bio = int(input('Please enter your marks obtained in Biology out of 100: '))
+math = int(input('Please enter your marks obtained in Mathematics out of 100: '))
+comp = int(input('Please enter your marks obtained in computer out of 100: '))
+percentage = ((phy+chem+bio+math+comp)/500)*100
+if percentage >= 90:
+    print('You got Grade A with percentage of: ', percentage)
+elif percentage >= 80:
+    print('You got Grade B with percentage of: ', percentage)
+elif percentage >= 70:
+    print('You got Grade C with percentage of: ', percentage)
+elif percentage >= 60:
+    print('You got Grade D with percentage of: ', percentage)
+elif percentage >= 50:
+    print('You got Grade E with percentage of: ', percentage)
+elif percentage >= 40:
+    print('You got Grade F with percentage of: , percentage')
+
+# =================================================================
+
+nms = ['renuka','abhijit','akshay','Vaibhav','yogesh','arti']
+
+def rev(nm):
+    #print(type(nm))
+    for i in nm:
+        print(i[::-1],end=' ')
+
+rev(nms)
+
+print(list(map(rev,nms)))
+#print(list(map(lambda sm:sm[::-1],nms)))
+
+# =====================================================
+
+s = [1,2,3,4,5,6]
+s1 = 12345
+print(type(s1))
+print(s.count(2))
+s1 = str(s)
+print(s1)
+print(type(s1))
+
+print(s1.count('5'))
+l = [1,2,3,4,5,6]
+
+s = map((lambda x:x+5,l))
+print(s)
+
+def add(*args): # instead of args we can use any other valid identifier
+    print(args)
+add(10,20)
+add()
+add(1,2,3)
+add(10,20,30,40)
+
+def func(*args):
+    print(sum(args))
+func(10,20)
+func(1,2,3,-5)
+func()
+func(1,2,3,4,5,6)
+
+def func(*n):
+    for i in n:
+        if str(i).isalpha()==1:
+            print(i,end=" ")
+
+func('X',10,'A')
+func(1,'V',3,'N')
+
+def func(**kwargs):
+    print(kwargs)
+func()
+func(name='Python',age=23)
+func(roll_no= 12,name='Abhi',marks= 80)
+# kwargs gives a dict always
+func(a =10,b=20,c=30)
